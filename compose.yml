@@ -1,0 +1,16 @@
+services:
+  database:
+    container_name: database
+    image: postgres:14
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5433:5432
+  cache:
+    container_name: redis
+    image: redis
+    restart: no
+    ports:
+      - '127.0.0.1:6379:6379'
