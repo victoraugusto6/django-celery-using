@@ -41,6 +41,11 @@ Run Celery Worker:
 `celery -A projeto worker -l INFO
 `
 
+Run Celery Worker with auto reload:
+
+`watchfiles --filter python 'celery -A projeto worker -l INFO'
+`
+
 Run Celery Beat for periodic tasks:
 
 `celery -A projeto beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
